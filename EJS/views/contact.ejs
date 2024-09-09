@@ -16,6 +16,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
         crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../public/style.css">
+
+
 </head>
 
 <body>
@@ -30,7 +33,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto  mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-item" >Home</a>
+                        <a href="http://localhost:8000/about">Home</a>
 
                     </li>
                     <li class="nav-item">
@@ -45,6 +48,10 @@
                         <a href="http://localhost:8000/contact">Contact</a>
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a href="http://localhost:8000/Data">Data</a>
+                        </a>
+                    </li>
                 </ul>
                 <form class="d-flex">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -52,25 +59,84 @@
                 </form>
             </div>
         </div>
-    </nav>
-    <div>
-    </div>
-    <form>
-        <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">Email address</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    </nav><br><br>
+
+    <section id="contact pt-5">
+        <div class="container mb-5">
+          <div class="row d-flex justify-content-center">
+            <div class="position-relative">
+              <h3 class=" d-flex justify-content-center">CONTACT</h3>
+            </div><br><br>
+            <div class="col-md-3 mb-5 ">
+              <div class="contact-icon ">
+                <i class="fa-solid fa-location-dot" style="color: #3c5c6b; font-size: 30px;"></i> <span
+                  style="font-size: 20px;">LOCATION :</span><br>THE STATE
+                OF LION <br><br>
+                <i class="fa-solid fa-envelope" style="color: #3c5c6b; font-size: 30px;"></i> <span
+                  style="font-size: 20px;">E-MAIL : </span><br>
+                khandalajk@gmail.com <br><br>
+                <i class="fa-solid fa-mobile" style="color: #3c5c6b; font-size: 30px;"></i> <span
+                  style="font-size: 20px;">CALL :</span><br> 7874643462 <br><br>
+    
+              </div>
+            </div>
+            <div class="col-md-5 d-flex flex-column justify-content-center  ">
+              <div class="form-name d-flex gap-1 ">
+                <input type="text" name="name" class="form-control " id="name" placeholder="Your Name" required="">
+                <input type="text" name="name" class="form-control " id="name" placeholder="Mobile Number" required="">
+              </div><br>
+              <input type="text" name="name" class="form-control " id="name" placeholder="Your Email" required=""><br>
+              <input type="text" name="name" class="form-control w-100 h-25" id="name" placeholder="Adress" required=""><br>
+              <button style="width: 150px; background-color: #ced4da;" type="submit" class="btn  text-black  ">Send
+                Message</button>
+            </div>
+          </div>
         </div>
-        <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">Password</label>
-          <input type="password" class="form-control" id="exampleInputPassword1">
+      </section>
+      <footer class="footer pt-5 pb-5">
+        <div class="container d-flex gap-5 justify-content-center list-unstyled  ">
+          <div class="row  ">
+            <div class="col-md-3" style="color: #3c5c6b;">
+              <h3>JAYDIP</h3>
+              <li>A108 Adam Street</li>
+              <li>New York, NY 535022</li><br>
+              <li>United States</li>
+              <li>Email: info@example.com</li>
+            </div>
+    
+            <div class="col-md-3" style="color: #3c5c6b;">
+              <h3> Useful Links</h3>
+              <li>>Home</li>
+              <li>>About us</li>
+              <li>>Services</li>
+              <li>>Terms of service</li>
+              <li>>Privacy policy</li>
+    
+            </div>
+    
+            <div class="col-md-3" style="color: #3c5c6b;">
+              <h3>Our Services</h3>
+              <li>>Web Design</li>
+              <li>>Web Design</li>
+              <li>>Product Management</li>
+              <li>>Marketing</li>
+              <li>>Graphic Design</li>
+            </div>
+    
+            <div class="col-md-3" style="color: #3c5c6b;">
+              <h3>Our Social Networks</h3>
+              <li>Cras fermentum odio eu feugiat lide par naso</li><br>
+    
+              <i class="fa-brands fa-facebook"></i>
+              <i class="fa-brands fa-twitter"></i>
+              <i class="fa-brands fa-instagram"></i>
+              <i class="fa-brands fa-linkedin"></i>
+            </div>
+    
+          </div>
         </div>
-        <div class="mb-3 form-check">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-          <label class="form-check-label" for="exampleCheck1">Check me out</label>
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
+      </footer>
+
 </body>
 <style>
     .nav-item a {
