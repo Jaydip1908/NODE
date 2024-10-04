@@ -3,13 +3,14 @@ const mongoose = require('mongoose')
 const { userRoute } = require("./src/routes/user");
 const userTestRoute = require("./src/routes/TestUser")
 // const router=express.Router()
+// const session = require('express-session')
+
 
 
 const app = express();
 
 
-app.use(express.json());
-app.use('', userTestRoute)
+
 
 app.use("/",(req, res, next) => {
     // console.log("Application level routing")
@@ -24,17 +25,19 @@ app.use("/",(req, res, next) => {
    
 // })
 app.use('/user', userRoute)
+app.use('/user', userTestRoute)
 
 
-app.use("/user",(req, res, next) => {
-    // console.log("Router level routing")
-    next()
-})
 
-app.get('/user/:id', (req, res, next) => {
-    res.send('USER')
-    next();
-})
+// app.use("/user",(req, res, next) => {
+//     // console.log("Router level routing")
+//     next()
+// })
+
+// app.get('/user/:id', (req, res, next) => {
+//     res.send('USER')
+//     next();
+// })
 
 
 app.get("/", (req, res) => {

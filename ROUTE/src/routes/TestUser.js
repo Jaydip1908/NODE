@@ -1,10 +1,11 @@
 const express = require("express");
 const {getData,getSingleData,createData,upadateData,deleteData}=require("../controler/TestUser")
+const sessionAuth=require("../middleware/sessionAuth")
 
 
 const userTestRouter=express.Router();
 
-userTestRouter.get("/get_data",getData)
+userTestRouter.get("/get_data",sessionAuth,getData)
 
 userTestRouter.get("/get_data/:index",getSingleData)
 

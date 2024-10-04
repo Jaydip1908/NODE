@@ -1,12 +1,17 @@
-const {User} = require("../models/user");
+const User = require("../models/user");
 
     const loginuser = async (req, res) => {
         const { username, password } = req.body;
 
-        const user = await User.findOne({ username: username })
+        const user = await User.findOne({ username: username });
 
         if (user) {
             if (user.password === password) {
+
+                req.session.user={
+                    username:username
+                };
+                console.log('Sessopm Data :',req.session.user)
                 res.status(200).json({
                     msg: "User Logeed In Successfully"
                 })
@@ -25,16 +30,16 @@ const {User} = require("../models/user");
 
 
 const logoutuser = (req, res) => {
-    const users=res.status(400).send({
+    const user=res.status(400).send({
         msg:"user is logged out"
     })
 }
 const registeruser =async (req, res) => {
     const {username,password,age}=req.body;
 
-    const users=await User.findOne({username:username});
+    const user=await User.findOne({username:username});
 
-    if(users){
+    if(user){
         res.status(409).json({
             msg:"User Alrady Registered",
         });

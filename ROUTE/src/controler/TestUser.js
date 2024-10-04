@@ -1,6 +1,7 @@
-const User = require("../models/user.js")
+const User = require("../models/user")
 
 const getData = async (req, res) => {
+    console.log("User Model", User)
     const user = await User.find();
     res.json(user);
 }
@@ -37,7 +38,7 @@ const createData = async (req, res) => {
 
         const alldata = await User.find();
         res.json({
-            msg: "data created.",
+            msg: "data created."
 
         })
     }
